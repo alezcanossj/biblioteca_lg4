@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "fbd2bfa0-7f95-4d0e-b1d0-07292cb42225",
+		"name": "BIBLIOTECA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BIBLIOTECA-WEB/rest/autor/consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Por Nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/BIBLIOTECA-WEB/rest/autor/consultar-por-nombre?nombre=\"Ale\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"consultar-por-nombre"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "\"Ale\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar/modificar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\":null,\r\n    \"nombre\":\"Mirtha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/BIBLIOTECA-WEB/rest/autor/incluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/BIBLIOTECA-WEB/rest/autor/eliminar/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BIBLIOTECA-WEB",
+						"rest",
+						"autor",
+						"eliminar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
